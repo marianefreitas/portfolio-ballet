@@ -1,21 +1,41 @@
 import { Routes } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
-import { SobreComponent } from './sobre/sobre.component';
-import { ApresentacoesComponent } from './apresentacoes/apresentacoes.component';
-import { GaleriaComponent } from './galeria/galeria.component';
-import { ConquistasComponent } from './conquistas/conquistas.component';
-import { ContatoComponent } from './contato/contato.component';
-import { DiarioComponent } from './diario/diario.component';
-
 export const PAGES_ROUTES: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' }, 
-  
-  { path: 'home', component: HomeComponent },
-  { path: 'sobre', component: SobreComponent },
-  { path: 'apresentacoes', component: ApresentacoesComponent },
-  { path: 'galeria', component: GaleriaComponent },
-  { path: 'conquistas', component: ConquistasComponent },
-  { path: 'contato', component: ContatoComponent },
-  { path: 'diario', component: DiarioComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+
+  {
+    path: 'home',
+    loadComponent: () =>
+      import('./home/home.component').then(m => m.HomeComponent),
+  },
+  {
+    path: 'sobre',
+    loadComponent: () =>
+      import('./sobre/sobre.component').then(m => m.SobreComponent),
+  },
+  {
+    path: 'apresentacoes',
+    loadComponent: () =>
+      import('./apresentacoes/apresentacoes.component').then(m => m.ApresentacoesComponent),
+  },
+  {
+    path: 'galeria',
+    loadComponent: () =>
+      import('./galeria/galeria.component').then(m => m.GaleriaComponent),
+  },
+  {
+    path: 'conquistas',
+    loadComponent: () =>
+      import('./conquistas/conquistas.component').then(m => m.ConquistasComponent),
+  },
+  {
+    path: 'contato',
+    loadComponent: () =>
+      import('./contato/contato.component').then(m => m.ContatoComponent),
+  },
+  {
+    path: 'diario',
+    loadComponent: () =>
+      import('./diario/diario.component').then(m => m.DiarioComponent),
+  },
 ];
