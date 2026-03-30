@@ -1,0 +1,114 @@
+
+.hero {
+    background: #F1ECE9;
+    border-radius: 24px;
+    padding: 60px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.hero-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text h1 {
+    color: #4A3F3C;
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    max-width: 500px;
+    justify-self: center;
+    position: relative;
+    margin-bottom: 16px;
+    line-height: 1.1;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-text h1::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 1.5px;
+    opacity: 0.8;
+    margin: 12px auto 0;
+    margin-top: 12px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #E6A98B,
+        transparent
+    );
+}
+
+.hero-text p {
+    color: #7A6F6B;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.hero-text button {
+    /*background: #E6A98B;*/
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 999px; /* pílula */
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-weight: 500;
+
+    background: transparent;
+    color: #E6A98B;
+    border: 1px solid #E6A98B;
+
+    transition: all 0.3s ease;
+}
+
+.hero-text button:hover {
+    background: #E6A98B;
+    color: #fff;
+    /*background: #d89576;*/
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+    box-shadow: none;
+}
+
+.hero-image img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    border-radius: 16px;
+    transform: translate(10px);
+}
