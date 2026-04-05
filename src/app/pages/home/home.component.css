@@ -255,6 +255,50 @@
         max-width: 280px;
         margin: 0 auto;
     }
+
+    .next-show {
+        padding: 60px 16px;
+    }
+
+    .card {
+        padding: 24px 20px;
+    }
+
+    .countdown {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .time-box {
+        flex: 1 1 40%;
+        min-width: unset;
+        padding: 14px;
+    }
+
+    .time-box span {
+        font-size: 22px;
+    }
+
+    .label::before,
+    .label::after {
+        width: 50px;
+    }
+
+    .label {
+        font-size: 16px;
+    }
+
+    .show-name {
+        font-size: 14px;
+    }
+
+    .show-date {
+        font-size: 12px;
+    }   
 }
 
 /* =========================
