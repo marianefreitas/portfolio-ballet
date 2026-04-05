@@ -116,6 +116,109 @@
 }
 
 /* =========================
+   CARD PRÓXIMO ESPETÁCULO
+========================= */
+
+.next-show {
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+/* CARD */
+.card {
+  background: #fdfdfd;
+  border-radius: 16px;
+  padding: 32px 40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  max-width: 650px;
+  width: 100%;
+}
+
+/* TÍTULO */
+.label {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+/* LINHAS DECORATIVAS */
+.label::before,
+.label::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 150px;
+  height: 1px;
+  background: #e5e5e5;
+}
+
+.label::before {
+  left: 0;
+}
+
+.label::after {
+  right: 0;
+}
+
+/* CONTAGEM */
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* BLOQUINHOS */
+.time-box {
+  background: #fafafa;
+  padding: 16px 18px;
+  border-radius: 10px;
+  min-width: 70px;
+}
+
+.time-box span {
+  display: block;
+  font-size: 28px;
+  font-weight: 500;
+  color: #888;
+  font-weight: 400;
+}
+
+.time-box small {
+  font-size: 12px;
+  color: #888;
+}
+
+/* DIVISOR */
+.divider {
+  width: 1px;
+  height: 40px;
+  background: #e5e5e5;
+}
+
+/* TEXTO FINAL */
+.show-name {
+  font-size: 16px;
+  color: #666;
+  margin-top: 16px;
+}
+
+.show-name span {
+  color: #b07a7a;
+  font-style: italic;
+}
+
+.show-date {
+  font-size: 14px;
+  color: #999;
+  margin-top: 6px;
+}
+
+/* =========================
    MOBILE
 ========================= */
 @media (max-width: 768px) {
@@ -153,6 +256,7 @@
         margin: 0 auto;
     }
 }
+
 /* =========================
    ANIMAÇÕES
 ========================= */
