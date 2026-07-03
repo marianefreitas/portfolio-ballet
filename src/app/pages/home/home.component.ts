@@ -1,11 +1,12 @@
 import { Component, NgZone } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
+import { RouterLink } from "@angular/router";
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [DecimalPipe],
+  imports: [DecimalPipe, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

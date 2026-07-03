@@ -1,0 +1,106 @@
+.hero {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    padding-top: 40px;
+  /* overflow: hidden; */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    color: #5a4a42;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.hero-overlay p {
+    max-width: 100%;
+    font-size: 1.2rem;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.decorated {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.decorated::before,
+.decorated::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #c8b6a6;
+    max-width: 60px;
+}
+
+.decorated::before {
+  left: -80px;
+}
+
+.decorated::after {
+  right: -80px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Empilha imagem e texto se necessário */
+  }
+
+  .hero-overlay {
+    position: relative; /* O texto sai de cima da imagem e vai para baixo */
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem; /* Diminui o título no celular */
+  }
+
+  .decorated::before,
+  .decorated::after {
+    max-width: 40px; /* Linhas menores no celular */
+  }
+}
