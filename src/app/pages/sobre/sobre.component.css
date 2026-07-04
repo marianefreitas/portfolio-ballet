@@ -1,106 +1,677 @@
+:host {
+  display: block;
+  background-color: #E5DAD4;
+  min-height: 100vh;
+  /* Garante que o preenchimento lateral ou margens não vazem o fundo do body */
+  padding-bottom: 40px;
+}
+
+/* ==========================================================================
+   SEÇÃO HERO - PÁGINA SOBRE
+   ========================================================================== */
+
 .hero {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 40px 0;
-    padding-top: 40px;
-  /* overflow: hidden; */
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 800px;
-    color: #5a4a42;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 16px;
-}
-
-.hero-overlay p {
-    max-width: 100%;
-    font-size: 1.2rem;
+  position: relative;
+  width: 100%;
+  margin: 0 0 40px 0;
+  border-radius: 0;
+  background-color: #E5DAD4;
+  /* Fundo que combina perfeitamente com os tons da foto */
+  aspect-ratio: 16 / 9;
+  /* Mantém a proporção padrão do mockup */
+  min-height: 400px;
+  overflow: hidden;
+  display: block;
 }
 
 .hero-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  /* Mantém a bailarina (à direita) sempre visível */
+  display: block;
 }
 
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* Centraliza verticalmente o texto */
+  padding-left: 8%;
+  /* Posiciona o bloco de texto no lado esquerdo */
+  box-sizing: border-box;
 
-.hero h1 {
-    font-size: 3.5rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    margin: 0;
-    line-height: 1.2;
+  /* Gradiente para suavizar a transição da foto na esquerda e destacar o texto */
+  background: linear-gradient(to right,
+      #E5DAD4 15%,
+      rgba(229, 218, 212, 0.9) 35%,
+      transparent 70%);
 }
 
-.hero p {
-    font-size: 1.2rem;
-    font-family: 'Poppins', sans-serif;
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 440px;
+  /* Limita a largura para evitar sobreposição */
+  padding: 20px;
 }
 
-.decorated {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    
-    margin-top: 10px;
-    font-style: italic;
+/* TÍTULO PRINCIPAL */
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #4A3F3C;
+  margin: 0;
+  line-height: 1.1;
+  position: relative;
 }
 
-.decorated::before,
-.decorated::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: #c8b6a6;
-    max-width: 60px;
+/* FLOURISH / PARÊNTESE DECORATIVO */
+.flourish {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 3.8rem;
+  color: #4A3F3C;
+  opacity: 0.8;
+  margin-right: -2px;
+  vertical-align: middle;
+  display: inline-block;
+  transform: translateY(-4px);
 }
 
-.decorated::before {
-  left: -80px;
+/* SUBTÍTULO DO TÍTULO (LINHAS LATERAIS) */
+.hero-title-sub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-style: italic;
+  font-size: 2.4rem;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  color: #4A3F3C;
 }
 
-.decorated::after {
-  right: -80px;
+.hero-title-sub::before,
+.hero-title-sub::after {
+  content: "";
+  height: 1px;
+  background-color: #B2A29B;
+  flex: 1;
+  max-width: 60px;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* SUBTÍTULO DO HERO */
+.hero-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: #7A6F6B;
+  margin: 0;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
 
-@media (max-width: 768px) {
+/* ==========================================================================
+   DIVISOR DE SEÇÃO (HERO -> INTRO)
+   ========================================================================== */
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 40px auto;
+  max-width: 400px;
+  gap: 16px;
+  padding: 0 20px;
+}
+
+.section-divider .line {
+  flex: 1;
+  height: 1px;
+  background-color: #D3C5C0;
+}
+
+.section-divider .circle-ornament {
+  width: 6px;
+  height: 6px;
+  border: 1px solid #A3928B;
+  border-radius: 50%;
+  position: relative;
+}
+
+/* Linhas horizontais extras ao lado do círculo */
+.section-divider .circle-ornament::before,
+.section-divider .circle-ornament::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 1px;
+  background-color: #A3928B;
+}
+
+.section-divider .circle-ornament::before {
+  right: 10px;
+}
+
+.section-divider .circle-ornament::after {
+  left: 10px;
+}
+
+/* ==========================================================================
+   SEÇÃO INTRO
+   ========================================================================== */
+
+.intro {
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.intro-text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #5D504A;
+  line-height: 1.8;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+/* ==========================================================================
+   SEÇÃO TIMELINE (MINHA JORNADA)
+   ========================================================================== */
+
+.timeline {
+  max-width: 1200px;
+  margin: 0 auto 80px auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.timeline-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #4A3F3C;
+  margin: 80px 0 60px 0;
+  text-align: center;
+}
+
+.timeline-section-title::before,
+.timeline-section-title::after {
+  content: "";
+  height: 1px;
+  background-color: #D3C5C0;
+  flex: 1;
+  max-width: 100px;
+}
+
+.timeline-container {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+}
+
+/* Linha central */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #D3C5C0;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  margin-bottom: 60px;
+  box-sizing: border-box;
+}
+
+.timeline-item::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Alinhamento alternado */
+.timeline-item.left {
+  left: 0;
+  padding-right: 48px;
+}
+
+.timeline-item.right {
+  left: 50%;
+  padding-left: 48px;
+}
+
+/* Texto alinhado de acordo com a lateral */
+.timeline-item.left .timeline-content {
+  text-align: right;
+  float: right;
+  width: 100%;
+}
+
+.timeline-item.right .timeline-content {
+  text-align: left;
+  float: left;
+  width: 100%;
+}
+
+/* Marcador (Dot) */
+.timeline-dot {
+  position: absolute;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: #A37B70; /* Cor terracota do mockup */
+  border: 4px solid #E5DAD4; /* Mesma cor do background da página */
+  border-radius: 50%;
+  z-index: 5;
+  box-sizing: content-box;
+}
+
+.timeline-item.left .timeline-dot {
+  right: -9px;
+}
+
+.timeline-item.right .timeline-dot {
+  left: -9px;
+}
+
+/* Estilo do texto da timeline */
+.timeline-year {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 2.4rem;
+  color: #A37B70;
+  display: block;
+  margin-bottom: 4px;
+  line-height: 1.1;
+}
+
+.timeline-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #4A3F3C;
+  margin: 0 0 10px 0;
+}
+
+.timeline-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #6E615C;
+  line-height: 1.6;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+/* Container de Imagens */
+.timeline-image-wrapper {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  max-width: 100%;
+}
+
+.timeline-img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
+   SEÇÃO ESTILO E INSPIRAÇÕES
+   ========================================================================== */
+
+.estilo {
+  max-width: 1200px;
+  margin: 80px auto 100px auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.estilo-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #4A3F3C;
+  margin: 0 0 60px 0;
+  text-align: center;
+}
+
+.estilo-section-title::before,
+.estilo-section-title::after {
+  content: "";
+  height: 1px;
+  background-color: #D3C5C0;
+  flex: 1;
+  max-width: 100px;
+}
+
+.estilo-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.estilo-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.estilo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.estilo-list li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #6E615C;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 24px;
+  line-height: 1.6;
+}
+
+/* Bolinha decorativa do bullet point */
+.estilo-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background-color: #A37B70;
+  border-radius: 50%;
+}
+
+.estilo-btn-wrapper {
+  text-decoration: none;
+  display: inline-block;
+  align-self: flex-start;
+}
+
+.estilo-btn {
+  background: #B07A7A; /* Tom rosa queimado/terracota do mockup */
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(176, 122, 122, 0.2);
+  transition: all 0.3s ease;
+}
+
+.estilo-btn:hover {
+  background: #9A6666;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(176, 122, 122, 0.35);
+}
+
+.estilo-image-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.estilo-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MOBILE & TABLET)
+   ========================================================================== */
+
+/* Quebra o layout em telas menores que 992px para evitar que o texto invada a bailarina */
+@media (max-width: 992px) {
   .hero {
-    flex-direction: column; /* Empilha imagem e texto se necessário */
+    aspect-ratio: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 30px 0;
+    /* Remove a margem externa lateral no mobile */
+  }
+
+  .hero-img {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    /* Altura fixa para a foto no celular/tablet */
   }
 
   .hero-overlay {
-    position: relative; /* O texto sai de cima da imagem e vai para baixo */
-    top: 0;
-    left: 0;
+    position: relative;
+    padding: 40px 20px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    /* Remove o gradiente lateral no modo empilhado */
+  }
+
+  .hero-text-container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .flourish {
+    font-size: 3.2rem;
+    transform: translateY(-3px);
+  }
+
+  .hero-title-sub {
+    font-size: 2rem;
+    gap: 12px;
+  }
+
+  .hero-title-sub::before,
+  .hero-title-sub::after {
+    max-width: 30px;
+  }
+
+  .intro-text {
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+
+  /* ==========================================================================
+     TIMELINE (RESPONSIVO)
+     ========================================================================== */
+  .timeline {
+    padding: 0 20px;
+  }
+
+  .timeline-section-title {
+    margin: 60px 0 40px 0;
+    font-size: 1.8rem;
+  }
+
+  .timeline-section-title::before,
+  .timeline-section-title::after {
+    max-width: 50px;
+  }
+
+  .timeline-line {
+    left: 8px; /* Move a linha vertical para o lado esquerdo */
     transform: none;
+  }
+
+  .timeline-item {
     width: 100%;
-    padding: 30px 20px;
+    margin-bottom: 40px;
   }
 
-  .hero h1 {
-    font-size: 2.5rem; /* Diminui o título no celular */
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+    padding-left: 28px;
+    padding-right: 0;
   }
 
-  .decorated::before,
-  .decorated::after {
-    max-width: 40px; /* Linhas menores no celular */
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    text-align: left;
+  }
+
+  .timeline-dot {
+    top: 6px;
+  }
+
+  .timeline-item.left .timeline-dot,
+  .timeline-item.right .timeline-dot {
+    left: -1px;
+    right: auto;
+  }
+
+  .timeline-year {
+    font-size: 2rem;
+  }
+
+  .timeline-subtitle {
+    font-size: 1.15rem;
+  }
+
+  .timeline-img {
+    max-width: 100%;
+  }
+
+  /* ==========================================================================
+     ESTILO E INSPIRAÇÕES (RESPONSIVO)
+     ========================================================================== */
+  .estilo {
+    padding: 0 20px;
+    margin: 60px auto;
+  }
+
+  .estilo-section-title {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  .estilo-section-title::before,
+  .estilo-section-title::after {
+    max-width: 50px;
+  }
+
+  .estilo-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .estilo-list {
+    margin-bottom: 30px;
+  }
+
+  .estilo-list li {
+    font-size: 1rem;
+  }
+
+  .estilo-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .estilo-img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-img {
+    height: 280px;
+    /* Altura menor para celulares pequenos */
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .flourish {
+    font-size: 2.6rem;
+    transform: translateY(-2px);
+  }
+
+  .hero-title-sub {
+    font-size: 1.7rem;
+  }
+}
+
+/* ==========================================================================
+   EFEITOS DE REVELAÇÃO AO ROLAR (SCROLL REVEAL)
+   ========================================================================== */
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .timeline-item, 
+  .estilo-container {
+    animation-name: revealUp;
+    animation-timeline: view();
+    animation-range: entry 10% cover 25%;
+    animation-fill-mode: both;
   }
 }

@@ -3,7 +3,7 @@
         <div class="hero-text">
             <h1 class="fade-in delay-2"> Gabriela </h1>
             <p class="fade-in delay-3"> A dança é a linguagem da alma</p>
-           <a routerLink="/pages/sobre"><button class="btn fade-in delay-4"> Ver Trajetória</button></a>
+            <a routerLink="/pages/sobre"><button class="btn fade-in delay-4"> Minha Trajetória</button></a>
         </div>
         <div class="hero-image fade-in delay-1">
             <img src="assets/images/gabriela-arabesque.png" alt="Gabriela arabesque">
@@ -12,47 +12,45 @@
 </section>
 
 <section class="next-show">
-  <div class="card">
+    <div class="card">
 
-    <p class="label">Próximo Espetáculo</p>
+        <p class="label">Próximo Espetáculo</p>
 
-    <div class="countdown">
+        <div class="countdown">
 
-        <div class="time-box">
-            <span>{{ dias }}</span>
-            <small>Dias</small>
+            <div class="time-box">
+                <span>{{ dias }}</span>
+                <small>Dias</small>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="time-box">
+                <span>{{ horas | number:'2.0' }}</span>
+                <small>Horas</small>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="time-box">
+                <span>{{ minutos | number:'2.0' }}</span>
+                <small>Minutos</small>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="time-box">
+                <span>{{ segundos | number:'2.0' }}</span>
+                <small>Segundos</small>
+            </div>
+
         </div>
 
-        <div class="divider"></div>  
+        <p class="show-name">
+            Para: <span>Abertura Abril pra Dança</span>
+        </p>
 
-        <div class="time-box">
-            <span>{{ horas | number:'2.0' }}</span>
-            <small>Horas</small>
-        </div>
-
-        <div class="divider"></div> 
-
-        <div class="time-box">
-            <span>{{ minutos | number:'2.0' }}</span>
-            <small>Minutos</small>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="time-box">
-            <span>{{ segundos | number:'2.0' }}</span>
-            <small>Segundos</small>
-        </div>
+        <p class="show-date">06 de Abril de 2026</p>
 
     </div>
-
-    <p class="show-name">
-        Para: <span>Abertura Abril pra Dança</span>
-    </p>
-
-    <p class="show-date">06 de Abril de 2026</p>
-
-  </div>
 </section>
-
-
