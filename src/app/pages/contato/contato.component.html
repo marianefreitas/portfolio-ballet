@@ -1,1 +1,191 @@
-<p>contato works!</p>
+<div class="contact-wrapper fade-in">
+  <div class="contact-container">
+
+    <!-- Painel Esquerdo: Títulos e Ilustração -->
+    <div class="contact-info">
+      <h1 class="contact-title">Contato</h1>
+
+      <div class="contact-decorator">
+        <span class="sparkle">✦</span>
+        <span class="line"></span>
+      </div>
+
+      <p class="contact-subtitle">
+        Vamos conversar sobre arte,<br>
+        parcerias ou novas oportunidades.<br>
+        Entre em contato.
+      </p>
+
+      <!-- Desenho Vetorial Minimalista de Bailarina (Inline SVG) -->
+      <div class="ballerina-sketch-container">
+        <svg class="ballerina-sketch" viewBox="0 0 200 200" fill="none" stroke="#B07A7A" stroke-width="1"
+          stroke-linecap="round" stroke-linejoin="round">
+          <!-- Head / Bun -->
+          <path d="M 62 108 C 62 105, 65 103, 67 105 C 69 107, 68 110, 66 110 Z" />
+          <path d="M 65 106 C 65 107, 64 108, 63 108" />
+          <!-- Spine curve -->
+          <path d="M 66 110 C 67 114, 71 120, 77 124 C 83 128, 89 129, 93 130" />
+          <!-- Front chest / torso outline -->
+          <path d="M 64 111 C 61 113, 59 116, 58 119 C 57 122, 59 125, 62 127 L 70 128" />
+          <!-- Skirt/Tutu -->
+          <path d="M 77 124 C 75 128, 70 134, 62 135 C 54 136, 46 135, 38 133 C 33 132, 29 131, 25 129" />
+          <path d="M 77 124 C 79 125, 81 126, 83 126" />
+          <path
+            d="M 83 126 C 85 130, 83 133, 79 135 C 73 138, 64 139, 56 139 C 48 139, 39 138, 30 136 C 26 135, 22 133, 18 131" />
+          <path d="M 83 126 C 93 127, 98 126, 100 127" />
+          <!-- Left Leg extended back (Arabesque) -->
+          <path d="M 93 130 C 105 125, 120 120, 135 115 C 150 110, 165 105, 178 100" />
+          <path d="M 94 130 C 103 129, 115 125, 128 122 C 140 118, 155 113, 172 106" />
+          <!-- Left Foot / Pointe shoe -->
+          <path d="M 178 100 C 180 99, 182 99, 183 100 C 184 101, 182 103, 179 104 C 176 105, 173 106, 172 106" />
+          <path d="M 176 102 L 180 102" />
+          <!-- Right Leg supporting (Standing on pointe) -->
+          <path d="M 85 130 C 86 138, 86 148, 86 158 C 85 168, 83 178, 80 188" />
+          <path d="M 90 130 C 91 138, 90 148, 89 157 C 88 166, 86 175, 83 184 L 80 188" />
+          <!-- Right Foot / Pointe shoe -->
+          <path d="M 80 188 C 79 190, 79 193, 79 195 C 80 197, 81 197, 81 195 C 82 192, 82 190, 82 188" />
+          <!-- Left Arm extended forward -->
+          <path d="M 62 112 C 55 112, 45 115, 36 120 L 26 126" />
+          <path d="M 26 126 C 25 127, 24 128, 23 129 C 22 130, 23 131, 24 130 C 26 128, 28 126, 30 125" />
+          <!-- Right Arm extended up/back -->
+          <path d="M 64 111 C 67 105, 72 98, 77 92 C 82 86, 87 81, 92 76" />
+          <path d="M 92 76 C 93 75, 94 74, 95 75 C 96 76, 95 77, 94 78 C 91 82, 88 86, 85 90" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Painel Direito: Formulário e Foto de Fundo -->
+    <div class="contact-form-panel">
+      <!-- Imagem de fundo lateral da bailarina -->
+      <div class="ballerina-photo-container">
+        <img src="assets/images/10.jpg" alt="Bailarina Gabriela" class="ballerina-photo">
+        <div class="photo-overlay"></div>
+      </div>
+
+      <div class="form-content">
+        <span class="form-section-title">ENVIE UMA MENSAGEM</span>
+
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+          <div class="form-row-2col">
+            <!-- Nome -->
+            <div class="form-group">
+              <input type="text" id="name" formControlName="name" name="name" placeholder="Nome"
+                [class.is-invalid]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+              <div class="error-hint" *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                O nome é obrigatório.
+              </div>
+            </div>
+
+            <!-- E-mail -->
+            <div class="form-group">
+              <input type="email" id="email" formControlName="email" name="email" placeholder="E-mail"
+                [class.is-invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+              <div class="error-hint" *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                <span *ngIf="contactForm.get('email')?.errors?.['required']">O e-mail é obrigatório.</span>
+                <span *ngIf="contactForm.get('email')?.errors?.['email']">Digite um e-mail válido.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Assunto -->
+          <div class="form-group full-width">
+            <input type="text" id="subject" formControlName="subject" name="subject" placeholder="Assunto"
+              [class.is-invalid]="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched">
+            <div class="error-hint" *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched">
+              O assunto é obrigatório.
+            </div>
+          </div>
+
+          <!-- Mensagem -->
+          <div class="form-group full-width">
+            <textarea id="message" formControlName="message" name="message" placeholder="Mensagem" rows="5"
+              [class.is-invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"></textarea>
+            <div class="error-hint" *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+              A mensagem é obrigatória.
+            </div>
+          </div>
+
+          <!-- Alertas de Feedback -->
+          <div class="alert success-alert" *ngIf="submitSuccess">
+            ✦ Sua mensagem foi enviada com sucesso!
+          </div>
+          <div class="alert error-alert" *ngIf="submitError">
+            ⚠ {{ submitError }}
+          </div>
+
+          <!-- Botão de Envio -->
+          <button type="submit" class="btn-submit" [disabled]="isSubmitting">
+            <span>{{ isSubmitting ? 'ENVIANDO...' : 'ENVIAR MENSAGEM' }}</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </form>
+
+        <p class="form-subtext">Retornarei o mais breve possível.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Linha divisória de canais de contato -->
+  <div class="channels-divider"></div>
+
+  <!-- Rodapé de Informações de Contato (3 colunas) -->
+  <div class="contact-channels">
+
+    <!-- E-mail -->
+    <div class="channel-card">
+      <div class="channel-icon-wrapper">
+        <svg class="channel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+      </div>
+      <div class="channel-details">
+        <span class="channel-label">E-MAIL</span>
+        <a href="mailto:contato@ballet.com.br" class="channel-value">contato@ballet.com.br</a>
+      </div>
+    </div>
+
+    <!-- Divisor vertical 1 -->
+    <div class="vertical-divider"></div>
+
+    <!-- Telefone -->
+    <div class="channel-card">
+      <div class="channel-icon-wrapper">
+        <svg class="channel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+          </path>
+        </svg>
+      </div>
+      <div class="channel-details">
+        <span class="channel-label">TELEFONE</span>
+        <a href="tel:+5511999999999" class="channel-value">(11) 99999-9999</a>
+      </div>
+    </div>
+
+    <!-- Divisor vertical 2 -->
+    <div class="vertical-divider"></div>
+
+    <!-- Localização -->
+    <div class="channel-card">
+      <div class="channel-icon-wrapper">
+        <svg class="channel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+      </div>
+      <div class="channel-details">
+        <span class="channel-label">LOCALIZAÇÃO</span>
+        <span class="channel-value">São Paulo – SP<br>Brasil</span>
+      </div>
+    </div>
+
+  </div>
+</div>
