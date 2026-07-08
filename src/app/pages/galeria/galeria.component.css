@@ -1,0 +1,90 @@
+.galeria-page-wrapper {
+  width: 100%;
+  background-color: #FDFBF9;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   FAIXA DE CITAÇÃO FINAL (Rodapé decorativo inspirado no mockup)
+   ========================================================================== */
+.gallery-quote-ribbon {
+  max-width: 1200px;
+  margin: 20px auto 80px auto;
+  padding: 0 24px;
+}
+
+.quote-container {
+  background-color: #FAF5F3; /* Fundo rosa/blush bem clarinho e suave */
+  border: 1px solid rgba(176, 122, 122, 0.08);
+  border-radius: 12px;
+  padding: 24px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  transition: all 0.3s ease;
+}
+
+.quote-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(176, 122, 122, 0.04);
+}
+
+.quote-icon-wrapper {
+  color: #B07A7A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-svg {
+  width: 48px;
+  height: 48px;
+  opacity: 0.85;
+}
+
+.quote-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.quote-main {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #7A6F6B;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.quote-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  color: #A89B96;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* Responsividade da Faixa de Citação */
+@media (max-width: 768px) {
+  .gallery-quote-ribbon {
+    margin: 10px auto 60px auto;
+  }
+  .quote-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+    gap: 16px;
+  }
+  .quote-svg {
+    width: 40px;
+    height: 40px;
+  }
+  .quote-main {
+    font-size: 1.1rem;
+  }
+  .quote-sub {
+    font-size: 0.8rem;
+  }
+}

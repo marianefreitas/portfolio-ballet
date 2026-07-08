@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 export interface Apresentacao {
   id: string;
@@ -21,7 +22,7 @@ export interface AnoApresentacoes {
 @Component({
   selector: 'app-apresentacoes',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './apresentacoes.component.html',
   styleUrl: './apresentacoes.component.css'
 })

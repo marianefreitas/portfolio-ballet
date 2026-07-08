@@ -143,7 +143,7 @@
 
               <!-- Ações do Card -->
               <div class="card-actions">
-                <button class="btn-gallery">Ver Galeria</button>
+                <button class="btn-gallery" [routerLink]="['/pages/galeria']" [queryParams]="{ presentation: apresentacao.id }">Ver Galeria</button>
                 <a href="#" class="btn-details" (click)="$event.preventDefault()">
                   Detalhes
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
