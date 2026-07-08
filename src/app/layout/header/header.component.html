@@ -1,27 +1,68 @@
 <header class="header">
-  <nav class="nav-container">
-    <ul class="nav-list">
-      <li>
-        <a routerLink="/pages/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-      </li>
-      <li>
-        <a routerLink="/pages/sobre" routerLinkActive="active">Sobre Mim</a>
-      </li>
-      <li>
-        <a routerLink="/pages/apresentacoes" routerLinkActive="active">Apresentações</a>
-      </li>
-      <li>
-        <a routerLink="/pages/galeria" routerLinkActive="active">Galeria</a>
-      </li>
-      <li>
-        <a routerLink="/pages/conquistas" routerLinkActive="active">Conquistas</a>
-      </li>
-      <li>
-        <a routerLink="/pages/diario" routerLinkActive="active">Diário da Dança</a>
-      </li>
-      <li>
-        <a routerLink="/pages/contato" routerLinkActive="active">Contato</a>
-      </li>
-    </ul>
-  </nav>
+  <div class="header-container">
+    <!-- Seção Esquerda: Logo -->
+    <a routerLink="/pages/home" class="logo-container">
+      <div class="logo-icon-wrapper">
+        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20,10 C18,6 15,6 15,10 C15,14 20,18 20,18 C20,18 25,14 25,10 C25,6 22,6 20,10 Z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <path d="M16,18 C14,18 12,22 12,28 C12,33 15,35 17,35 C19,35 20,33 20,28 C20,22 18,18 16,18 Z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <path d="M24,18 C22,18 20,22 20,28 C20,33 21,35 23,35 C25,35 28,33 28,28 C28,22 26,18 24,18 Z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <path d="M12,18 C15,18 17,14 20,14 C23,14 25,18 28,18" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <path d="M14,24 C15,25 17,25 18,24" stroke="currentColor" stroke-width="0.8" fill="none"/>
+          <path d="M22,24 C23,25 25,25 26,24" stroke="currentColor" stroke-width="0.8" fill="none"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-title">GABRIELA</span>
+        <span class="logo-subtitle">BALETTI</span>
+      </div>
+    </a>
+
+    <!-- Seção Central: Links de Navegação -->
+    <nav class="nav-container">
+      <ul class="nav-list">
+        <li>
+          <a routerLink="/pages/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Início</a>
+        </li>
+        <li>
+          <a routerLink="/pages/sobre" routerLinkActive="active">Sobre</a>
+        </li>
+        <li>
+          <a routerLink="/pages/apresentacoes" routerLinkActive="active">Apresentações</a>
+        </li>
+        <li>
+          <a routerLink="/pages/galeria" routerLinkActive="active">Galeria</a>
+        </li>
+        <!-- Comentado por solicitação do usuário
+        <li>
+          <a routerLink="/pages/conquistas" routerLinkActive="active">Conquistas</a>
+        </li>
+        <li>
+          <a routerLink="/pages/diario" routerLinkActive="active">Diário da Dança</a>
+        </li>
+        -->
+        <li>
+          <a routerLink="/pages/contato" routerLinkActive="active">Contato</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Seção Direita: Redes Sociais -->
+    <div class="socials-container">
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+        <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+        <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"></path>
+          <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon>
+        </svg>
+      </a>
+    </div>
+  </div>
 </header>
+

@@ -1,21 +1,80 @@
 .header {
   width: 100%;
-  background-color: #F7F4F2; /* Tom off-white padrão da página */
-  border-bottom: 1px solid rgba(211, 197, 192, 0.3);
+  background-color: rgba(253, 251, 249, 0.95); /* Off-white de alta classe e semitransparência */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(176, 122, 122, 0.15); /* Bordas em tom bronzeado/rose suave */
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 4px 20px rgba(176, 122, 122, 0.03); /* Sombra elegante e sutil */
+  transition: all 0.3s ease;
 }
 
-.nav-container {
+.header-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* Três colunas perfeitas: logo à esquerda, nav no centro, redes à direita */
+  align-items: center;
+  height: 80px; /* Altura premium */
+}
+
+/* Área do Logotipo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  justify-self: start; /* Alinha na extrema esquerda */
+}
+
+.logo-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #B07A7A; /* Acento rose-gold */
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.4s ease;
+}
+
+.logo-container:hover .logo-icon {
+  transform: scale(1.05) rotate(-3deg);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #7A6F6B; /* Cor clássica e sóbria */
+  letter-spacing: 0.18em;
+}
+
+.logo-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: #B07A7A; /* Subtítulo em rose gold */
+  letter-spacing: 0.45em;
+  margin-top: 1px;
+}
+
+/* Menu de Navegação */
+.nav-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70px;
 }
 
 .nav-list {
@@ -23,53 +82,105 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 32px;
+  gap: 40px; /* Amplo espaçamento igual ao mockup */
   align-items: center;
 }
 
 .nav-list li a {
   font-family: 'Poppins', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 400;
+  font-size: 0.85rem; /* Fonte sofisticada e discreta */
+  font-weight: 500;
   color: #7A6F6B;
   text-decoration: none;
-  padding: 8px 0;
+  padding: 10px 0;
   position: relative;
   transition: color 0.3s ease;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.12em; /* Espaçamento de letras */
+  text-transform: uppercase; /* Caixa alta */
 }
 
 .nav-list li a:hover {
   color: #B07A7A;
 }
 
-/* Efeito do sublinhado ativo como no mockup */
-.nav-list li a.active {
-  color: #B07A7A;
-  font-weight: 500;
-}
-
+/* Efeito de sublinhado que preenche toda a largura da palavra */
 .nav-list li a::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 0;
   width: 0;
-  height: 2px;
+  height: 1.5px;
   background-color: #B07A7A;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
+  transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-list li a:hover::after {
+  width: 100%;
+}
+
+.nav-list li a.active {
+  color: #B07A7A;
 }
 
 .nav-list li a.active::after {
-  width: 24px; /* Barra de destaque sob o link ativo, igual ao mockup */
+  width: 100%; /* Mantém o sublinhado na largura total do link ativo */
 }
 
-/* Responsividade para celulares */
+/* Área de Redes Sociais */
+.socials-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-self: end; /* Alinha na extrema direita */
+}
+
+.social-link {
+  color: #B07A7A;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link:hover {
+  color: #7A6F6B;
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .header-container {
+    grid-template-columns: 1fr auto; /* Oculta ou reposiciona redes para priorizar espaço */
+    height: 75px;
+  }
+  
+  .socials-container {
+    display: none; /* Oculta em tablets compactos */
+  }
+
+  .nav-list {
+    gap: 24px;
+  }
+}
+
 @media (max-width: 768px) {
-  .nav-container {
+  .header-container {
+    display: flex;
+    flex-direction: column;
     height: auto;
-    padding: 15px 10px;
+    padding: 16px 20px;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .logo-container {
+    justify-self: center;
   }
 
   .nav-list {
@@ -79,6 +190,8 @@
   }
 
   .nav-list li a {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
+    padding: 6px 0;
   }
 }
+
