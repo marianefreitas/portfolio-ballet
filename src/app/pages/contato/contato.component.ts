@@ -43,7 +43,7 @@ export class ContatoComponent {
 
     const body = this.contactForm.value;
 
-    this.http.post('https://formsubmit.co/mariane11.freitas@gmail.com', body, { headers })
+    this.http.post('https://formsubmit.co/ajax/mariane11.freitas@gmail.com', body, { headers })
       .subscribe({
         next: (response: any) => {
           this.isSubmitting = false;
