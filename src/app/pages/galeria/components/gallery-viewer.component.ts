@@ -1,5 +1,6 @@
-import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { MediaGroup, GalleryMedia } from './gallery-group.component';
 
 @Component({
@@ -35,16 +36,29 @@ import { MediaGroup, GalleryMedia } from './gallery-group.component';
           <!-- Foto -->
           <img 
             *ngIf="activeMedia?.type === 'photo'" 
-            [src]="activeMedia?.url" 
+            [src]="getMediaUrl(activeMedia?.url)" 
             [alt]="activeMedia?.title" 
             class="viewer-media-element fade-in-media" />
 
           <!-- Vídeo -->
           <div *ngIf="activeMedia?.type === 'video'" class="video-container fade-in-media">
-            <!-- Usando a capa como poster e controles do player nativo do navegador -->
+            <!-- Suporte inteligente ao YouTube com visual integrado -->
+            <iframe 
+              *ngIf="isYouTubeUrl(activeMedia?.url)"
+              [src]="getYouTubeEmbedUrl(activeMedia?.url)"
+              class="viewer-media-element video-element youtube-iframe"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+
+            <!-- Suporte a arquivo de vídeo direto (MP4 no ImageKit ou CDN) -->
             <video 
-              [src]="activeMedia?.url"
-              [poster]="activeMedia?.thumbnail"
+              *ngIf="!isYouTubeUrl(activeMedia?.url)"
+              [src]="getMediaUrl(activeMedia?.url)"
+              [poster]="getMediaUrl(activeMedia?.thumbnail)"
+              preload="none"
+              playsinline
               controls 
               class="viewer-media-element video-element"
               #videoPlayer>
@@ -204,6 +218,15 @@ import { MediaGroup, GalleryMedia } from './gallery-group.component';
       height: 100%;
     }
 
+    .youtube-iframe {
+      width: 100%;
+      height: 100%;
+      max-width: 900px;
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: 6px;
+    }
+
     /* Rodapé com Informações */
     .viewer-footer {
       width: 100%;
@@ -346,6 +369,40 @@ export class GalleryViewerComponent implements OnChanges {
     if (!this.group) return;
     this.activeIndex = (this.activeIndex + 1) % this.group.medias.length;
     this.updateActiveMedia();
+  }
+
+  private sanitizer = inject(DomSanitizer);
+
+  isYouTubeUrl(url: string | undefined): boolean {
+    if (!url) return false;
+    return url.includes('youtube.com') || url.includes('youtu.be');
+  }
+
+  getYouTubeEmbedUrl(url: string | undefined): SafeResourceUrl {
+    if (!url) return this.sanitizer.bypassSecurityTrustResourceUrl('');
+    
+    let videoId = '';
+    if (url.includes('youtube.com/shorts/')) {
+      videoId = url.split('shorts/')[1]?.split('?')[0]?.split('&')[0] || '';
+    } else if (url.includes('youtube.com/watch?v=')) {
+      videoId = url.split('v=')[1]?.split('&')[0] || '';
+    } else if (url.includes('youtu.be/')) {
+      videoId = url.split('youtu.be/')[1]?.split('?')[0]?.split('&')[0] || '';
+    } else if (url.includes('youtube.com/embed/')) {
+      videoId = url.split('youtube.com/embed/')[1]?.split('?')[0]?.split('&')[0] || '';
+    } else {
+      videoId = url;
+    }
+
+    const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0&playsinline=1`;
+    return this.sanitizer.bypassSecurityTrustResourceUrl(embedUrl);
+  }
+
+  getMediaUrl(path: string | undefined): string {
+    if (!path) return '';
+    if (path.startsWith('http://') || path.startsWith('https://')) return path;
+    const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+    return `https://ik.imagekit.io/gabiballet/${cleanPath}`;
   }
 
   onClose() {

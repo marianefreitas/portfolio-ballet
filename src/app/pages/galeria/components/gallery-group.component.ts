@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 export interface GalleryMedia {
   id: string;
@@ -28,7 +28,7 @@ export interface MediaGroup {
 @Component({
   selector: 'app-gallery-group',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   template: `
     <div 
       class="gallery-group-card" 
@@ -38,7 +38,7 @@ export interface MediaGroup {
       
       <!-- Imagem de Capa com Efeito Zoom -->
       <div class="card-cover-wrapper">
-        <img [src]="group.coverUrl" [alt]="group.title" class="card-cover-image" />
+        <img [ngSrc]="group.coverUrl" fill [alt]="group.title" class="card-cover-image" />
         <div class="card-gradient-overlay"></div>
       </div>
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 export interface Apresentacao {
@@ -22,7 +22,7 @@ export interface AnoApresentacoes {
 @Component({
   selector: 'app-apresentacoes',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, NgOptimizedImage],
   templateUrl: './apresentacoes.component.html',
   styleUrl: './apresentacoes.component.css'
 })
@@ -40,7 +40,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Escola de Dança Gabi Baletti',
           local: 'Teatro Municipal de Curitiba',
           data: 'Novembro • 2026',
-          imagemUrl: 'assets/images/gabriela-flautista.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-flautista.png',
           destaque: 'papel-principal'
         },
         {
@@ -50,7 +50,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Escola de Dança Gabi Baletti',
           local: 'Festival de Dança de Joinville',
           data: 'Agosto • 2026',
-          imagemUrl: 'assets/images/gabriela-passaro-azul.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-passaro-azul.png',
           destaque: 'corpo-de-baile'
         }
       ]
@@ -66,7 +66,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Escola de Dança Gabi Baletti',
           local: 'Teatro Positivo',
           data: 'Outubro • 2025',
-          imagemUrl: 'assets/images/gabriela-arabesque.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-arabesque.png',
           destaque: 'papel-principal'
         },
         {
@@ -76,7 +76,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Escola de Dança Gabi Baletti',
           local: 'Teatro Municipal de Curitiba',
           data: 'Dezembro • 2025',
-          imagemUrl: 'assets/images/gabriela-flautista.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-flautista.png',
           destaque: 'primeira-variacao'
         },
         {
@@ -86,7 +86,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Festival de Dança de Joinville',
           local: 'Joinville - SC',
           data: 'Julho • 2025',
-          imagemUrl: 'assets/images/gabriela-passaro-azul.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-passaro-azul.png',
           destaque: 'premiado'
         },
         {
@@ -96,7 +96,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Escola de Dança Gabi Baletti',
           local: 'Teatro Positivo',
           data: 'Maio • 2025',
-          imagemUrl: 'assets/images/gabriela-arabesque.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-arabesque.png',
           destaque: 'festival-nacional'
         }
       ]
@@ -112,7 +112,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Escola de Dança Gabi Baletti',
           local: 'Teatro Municipal de Curitiba',
           data: 'Novembro • 2024',
-          imagemUrl: 'assets/images/gabriela-flautista.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-flautista.png',
           destaque: 'papel-principal'
         },
         {
@@ -122,7 +122,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Escola de Dança Gabi Baletti',
           local: 'Mostra de Dança Clássica',
           data: 'Setembro • 2024',
-          imagemUrl: 'assets/images/gabriela-passaro-azul.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-passaro-azul.png',
           destaque: 'primeira-variacao'
         },
         {
@@ -132,7 +132,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Mostra de Dança Contemporânea',
           local: 'Curitiba - PR',
           data: 'Junho • 2024',
-          imagemUrl: 'assets/images/gabriela-arabesque.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-arabesque.png',
           destaque: 'festival-nacional'
         }
       ]
@@ -148,7 +148,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Escola de Dança Gabi Baletti',
           local: 'Teatro Positivo',
           data: 'Novembro • 2023',
-          imagemUrl: 'assets/images/gabriela-flautista.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-flautista.png',
           destaque: 'papel-principal'
         },
         {
@@ -158,7 +158,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Escola de Dança Gabi Baletti',
           local: 'Teatro Municipal de Curitiba',
           data: 'Setembro • 2023',
-          imagemUrl: 'assets/images/gabriela-passaro-azul.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-passaro-azul.png',
           destaque: 'papel-principal'
         }
       ]
@@ -174,7 +174,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Escola de Dança Gabi Baletti',
           local: 'Festival de Dança de Joinville',
           data: 'Julho • 2022',
-          imagemUrl: 'assets/images/gabriela-arabesque.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-arabesque.png',
           destaque: 'premiado'
         },
         {
@@ -184,7 +184,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Escola de Dança Gabi Baletti',
           local: 'Teatro Guaíra',
           data: 'Junho • 2022',
-          imagemUrl: 'assets/images/gabriela-flautista.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-flautista.png',
           destaque: 'corpo-de-baile'
         }
       ]
@@ -200,7 +200,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Escola de Dança Gabi Baletti',
           local: 'Teatro Positivo',
           data: 'Dezembro • 2021',
-          imagemUrl: 'assets/images/gabriela-passaro-azul.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-passaro-azul.png',
           destaque: 'papel-principal'
         },
         {
@@ -210,7 +210,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Escola de Dança Gabi Baletti',
           local: 'Mostra de Dança Clássica',
           data: 'Outubro • 2021',
-          imagemUrl: 'assets/images/gabriela-arabesque.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-arabesque.png',
           destaque: 'corpo-de-baile'
         }
       ]
@@ -226,7 +226,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Escola de Dança Gabi Baletti',
           local: 'Teatro Guaíra',
           data: 'Novembro • 2020',
-          imagemUrl: 'assets/images/gabriela-flautista.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-flautista.png',
           destaque: 'papel-principal'
         },
         {
@@ -236,7 +236,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Festival de Dança de Joinville',
           local: 'Joinville - SC',
           data: 'Julho • 2020',
-          imagemUrl: 'assets/images/gabriela-passaro-azul.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-passaro-azul.png',
           destaque: 'premiado'
         }
       ]
@@ -252,7 +252,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Escola de Dança Gabi Baletti',
           local: 'Teatro Municipal de Curitiba',
           data: 'Dezembro • 2019',
-          imagemUrl: 'assets/images/gabriela-arabesque.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-arabesque.png',
           destaque: 'corpo-de-baile'
         },
         {
@@ -262,7 +262,7 @@ export class ApresentacoesComponent implements OnInit {
           escola: 'Escola de Dança Gabi Baletti',
           local: 'Teatro Positivo',
           data: 'Outubro • 2019',
-          imagemUrl: 'assets/images/gabriela-flautista.png',
+          imagemUrl: 'ballet/apresentacoes/gabriela-flautista.png',
           destaque: 'primeira-variacao'
         }
       ]
@@ -272,24 +272,40 @@ export class ApresentacoesComponent implements OnInit {
       espetaculosCount: 2,
       apresentacoes: [
         {
-          id: 'coppelia-2018',
-          titulo: 'Coppélia',
-          papel: 'Corpo de Baile',
-          escola: 'Escola de Dança Gabi Baletti',
-          local: 'Teatro Guaíra',
-          data: 'Novembro • 2018',
-          imagemUrl: 'assets/images/gabriela-passaro-azul.png',
+          id: 'etudes-2018',
+          titulo: 'Etudes',
+          papel: 'Corpo de baile',
+          escola: 'Escola de Dança de São Paulo',
+          local: 'Teatro Municipal de São Paulo',
+          data: 'julho • 2018',
+          imagemUrl: 'ballet/apresentacoes/gabriela-etudes-01.jpg',
           destaque: 'corpo-de-baile'
         },
         {
-          id: 'passo-2018',
-          titulo: 'Primeiro Passo',
-          papel: 'Solo Iniciante',
-          escola: 'Escola de Dança Gabi Baletti',
-          local: 'Auditório Salvador',
-          data: 'Outubro • 2018',
-          imagemUrl: 'assets/images/gabriela-arabesque.png',
-          destaque: 'primeira-variacao'
+          id: 'quebra-nozes-2018',
+          titulo: 'Quebra Nozes',
+          papel: 'Ratinhos',
+          escola: 'Escola de Dança De São Paulo',
+          local: 'Teatro Municipal de São Paulo',
+          data: 'Dezembro • 2018',
+          imagemUrl: 'ballet/apresentacoes/gabriela-arabesque.png',
+          destaque: 'corpo-de-baile'
+        }
+      ]
+    },
+    {
+      ano: 2017,
+      espetaculosCount: 1,
+      apresentacoes: [
+        {
+          id: 'giselle-2017',
+          titulo: 'Giselle',
+          papel: 'Wilís',
+          escola: 'Fábricas De Cultura',
+          local: 'Fábricas De Cultura - Cidade Tiradentes - SP',
+          data: 'Dezembro • 2017',
+          imagemUrl: 'ballet/apresentacoes/gabriela-fabrica.JPG',
+          destaque: 'corpo-de-baile'
         }
       ]
     }
@@ -297,7 +313,7 @@ export class ApresentacoesComponent implements OnInit {
 
   // Lista dinâmica que de fato alimenta a interface
   anosExibidos: AnoApresentacoes[] = [];
-  
+
   // Limite atual de anos renderizados simultaneamente (começa exibindo os primeiros 3 anos)
   limiteExibicao = 3;
 

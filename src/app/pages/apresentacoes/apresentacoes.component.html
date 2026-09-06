@@ -51,7 +51,7 @@
     
     <!-- Imagem de Destaque à Direita -->
     <div class="hero-image-container">
-      <img src="assets/images/gabriela-arabesque.png" alt="Gabriela Baletti executando Arabesque" class="hero-image" />
+      <img ngSrc="ballet/apresentacoes/gabriela-arabesque.png" width="400" height="480" priority alt="Gabriela Baletti executando Arabesque" class="hero-image" />
       <div class="hero-image-overlay"></div>
     </div>
   </section>
@@ -93,7 +93,7 @@
               
               <!-- Imagem com o Selo de Destaque -->
               <div class="card-image-wrapper">
-                <img [src]="apresentacao.imagemUrl" [alt]="apresentacao.titulo" class="card-image" />
+                <img [ngSrc]="apresentacao.imagemUrl" [alt]="apresentacao.titulo" width="300" height="200" loading="lazy" class="card-image" />
                 
                 <!-- Selo/Badge do Destaque -->
                 <div class="card-badge" [ngClass]="apresentacao.destaque" *ngIf="apresentacao.destaque" [title]="apresentacao.destaque | titlecase">

@@ -288,8 +288,10 @@
   top: 10px;
   width: 10px;
   height: 10px;
-  background-color: #A37B70; /* Cor terracota do mockup */
-  border: 4px solid #E5DAD4; /* Mesma cor do background da página */
+  background-color: #A37B70;
+  /* Cor terracota do mockup */
+  border: 4px solid #E5DAD4;
+  /* Mesma cor do background da página */
   border-radius: 50%;
   z-index: 5;
   box-sizing: content-box;
@@ -339,14 +341,47 @@
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.6);
-  display: inline-block;
-  max-width: 100%;
+  display: block;
 }
 
-.timeline-img {
+/* Alinhamento da imagem dependendo da posição do card */
+.timeline-item.left .timeline-image-wrapper {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.timeline-item.right .timeline-image-wrapper {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* OPCÃO 1: Imagem Horizontal (Padrão) */
+.timeline-image-wrapper,
+.timeline-image-wrapper.horizontal {
   max-width: 420px;
   width: 100%;
-  height: auto;
+}
+
+.timeline-img,
+.timeline-img.horizontal {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* OPCÃO 2: Imagem Vertical */
+.timeline-image-wrapper.vertical {
+  max-width: 280px;
+  width: 100%;
+}
+
+.timeline-img.vertical {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  object-position: center 20%;
   display: block;
 }
 
@@ -433,7 +468,8 @@
 }
 
 .estilo-btn {
-  background: #B07A7A; /* Tom rosa queimado/terracota do mockup */
+  background: #B07A7A;
+  /* Tom rosa queimado/terracota do mockup */
   color: #FFFFFF;
   font-family: 'Poppins', sans-serif;
   font-size: 0.95rem;
@@ -547,7 +583,8 @@
   }
 
   .timeline-line {
-    left: 8px; /* Move a linha vertical para o lado esquerdo */
+    left: 8px;
+    /* Move a linha vertical para o lado esquerdo */
     transform: none;
   }
 
@@ -586,8 +623,10 @@
     font-size: 1.15rem;
   }
 
-  .timeline-img {
-    max-width: 100%;
+  .timeline-item.left .timeline-image-wrapper,
+  .timeline-item.right .timeline-image-wrapper {
+    margin-left: 0;
+    margin-right: auto;
   }
 
   /* ==========================================================================
@@ -660,6 +699,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -667,7 +707,8 @@
 }
 
 @supports (animation-timeline: view()) {
-  .timeline-item, 
+
+  .timeline-item,
   .estilo-container {
     animation-name: revealUp;
     animation-timeline: view();

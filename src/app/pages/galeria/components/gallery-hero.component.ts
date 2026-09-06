@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-gallery-hero',
   standalone: true,
+  imports: [NgOptimizedImage],
   template: `
     <section class="gallery-hero">
       <div class="hero-content">
@@ -20,7 +22,7 @@ import { Component } from '@angular/core';
       </div>
       
       <div class="hero-image-container">
-        <img src="assets/images/gabriela-flautista.png" alt="Gabriela Baletti Dançando" class="hero-image" />
+        <img ngSrc="ballet/galeria/gabriela-flautista.png" width="450" height="420" priority alt="Gabriela Baletti Dançando" class="hero-image" />
         <div class="hero-image-overlay"></div>
       </div>
     </section>

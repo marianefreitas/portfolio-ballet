@@ -31,8 +31,8 @@ export class GaleriaComponent implements OnInit {
       type: 'photo',
       title: 'A Bela Adormecida - Entrada Principal',
       description: 'Gabriela executando a variação da Princesa Aurora no palco do Teatro Municipal.',
-      url: 'assets/images/gabriela-flautista.png',
-      thumbnail: 'assets/images/gabriela-flautista.png',
+      url: 'ballet/galeria/gabriela-flautista.png',
+      thumbnail: 'ballet/galeria/gabriela-flautista.png',
       presentation: 'bela-adormecida',
       categories: ['espetaculo'],
       year: 2024,
@@ -43,8 +43,8 @@ export class GaleriaComponent implements OnInit {
       type: 'photo',
       title: 'A Bela Adormecida - Coda Final',
       description: 'Pose final de comemoração após a variação lírica da Princesa.',
-      url: 'assets/images/gabriela-arabesque.png',
-      thumbnail: 'assets/images/gabriela-arabesque.png',
+      url: 'ballet/galeria/gabriela-arabesque.png',
+      thumbnail: 'ballet/galeria/gabriela-arabesque.png',
       presentation: 'bela-adormecida',
       categories: ['espetaculo', 'ensaio'],
       year: 2024,
@@ -56,7 +56,7 @@ export class GaleriaComponent implements OnInit {
       title: 'Variação da Princesa Aurora - Vídeo de Apresentação',
       description: 'Gravação oficial da variação clássica apresentada na mostra de final de ano.',
       url: 'https://www.w3schools.com/html/mov_bbb.mp4',
-      thumbnail: 'assets/images/gabriela-passaro-azul.png',
+      thumbnail: 'ballet/galeria/gabriela-passaro-azul.png',
       presentation: 'bela-adormecida',
       categories: ['espetaculo', 'video'],
       year: 2024,
@@ -69,8 +69,8 @@ export class GaleriaComponent implements OnInit {
       type: 'photo',
       title: 'Gala de Abertura - Solo Contemporâneo',
       description: 'Gabriela em momento lírico de expressão corporal com luz dramática.',
-      url: 'assets/images/gabriela-passaro-azul.png',
-      thumbnail: 'assets/images/gabriela-passaro-azul.png',
+      url: 'ballet/galeria/gabriela-passaro-azul.png',
+      thumbnail: 'ballet/galeria/gabriela-passaro-azul.png',
       presentation: 'gala-abertura',
       categories: ['espetaculo'],
       year: 2026,
@@ -81,8 +81,8 @@ export class GaleriaComponent implements OnInit {
       type: 'photo',
       title: 'Ensaio Geral da Gala de Abertura',
       description: 'Momento de instrução e posicionamento da equipe no palco antes do início.',
-      url: 'assets/images/gabriela-flautista.png',
-      thumbnail: 'assets/images/gabriela-flautista.png',
+      url: 'ballet/galeria/gabriela-flautista.png',
+      thumbnail: 'ballet/galeria/gabriela-flautista.png',
       presentation: 'gala-abertura',
       categories: ['espetaculo', 'ensaio'],
       year: 2026,
@@ -95,8 +95,8 @@ export class GaleriaComponent implements OnInit {
       type: 'photo',
       title: 'Dom Quixote - Solo do Cupido',
       description: 'Gabriela caracterizada como Cupido, executando saltos ágeis em ponta.',
-      url: 'assets/images/gabriela-arabesque.png',
-      thumbnail: 'assets/images/gabriela-arabesque.png',
+      url: 'ballet/galeria/gabriela-arabesque.png',
+      thumbnail: 'ballet/galeria/gabriela-arabesque.png',
       presentation: 'dom-quixote',
       categories: ['espetaculo'],
       year: 2025,
@@ -108,7 +108,7 @@ export class GaleriaComponent implements OnInit {
       title: 'Dom Quixote - Detalhes do Salto',
       description: 'Trecho em vídeo da variação rápida com saltos e piruetas do Cupido.',
       url: 'https://www.w3schools.com/html/mov_bbb.mp4',
-      thumbnail: 'assets/images/gabriela-flautista.png',
+      thumbnail: 'ballet/galeria/gabriela-flautista.png',
       presentation: 'dom-quixote',
       categories: ['espetaculo', 'video'],
       year: 2025,
@@ -121,8 +121,8 @@ export class GaleriaComponent implements OnInit {
       type: 'photo',
       title: 'O Quebra-Nozes - Clara e o Boneco',
       description: 'Interpretação cênica do momento em que Clara ganha o boneco de presente de Natal.',
-      url: 'assets/images/gabriela-flautista.png',
-      thumbnail: 'assets/images/gabriela-flautista.png',
+      url: 'ballet/galeria/gabriela-flautista.png',
+      thumbnail: 'ballet/galeria/gabriela-flautista.png',
       presentation: 'quebra-nozes',
       categories: ['espetaculo'],
       year: 2026,
@@ -133,8 +133,8 @@ export class GaleriaComponent implements OnInit {
       type: 'photo',
       title: 'O Quebra-Nozes - Valsa das Flores',
       description: 'Corpo de baile posicionado sob as luzes de inverno no palco do Teatro Guaíra.',
-      url: 'assets/images/gabriela-passaro-azul.png',
-      thumbnail: 'assets/images/gabriela-passaro-azul.png',
+      url: 'ballet/galeria/gabriela-passaro-azul.png',
+      thumbnail: 'ballet/galeria/gabriela-passaro-azul.png',
       presentation: 'quebra-nozes',
       categories: ['espetaculo', 'ensaio'],
       year: 2026,
@@ -147,8 +147,8 @@ export class GaleriaComponent implements OnInit {
       type: 'photo',
       title: 'Coppélia - Variação de Swanilda',
       description: 'Variação cómica e leve do primeiro ato executada com maestria.',
-      url: 'assets/images/gabriela-arabesque.png',
-      thumbnail: 'assets/images/gabriela-arabesque.png',
+      url: 'ballet/galeria/gabriela-arabesque.png',
+      thumbnail: 'ballet/galeria/gabriela-arabesque.png',
       presentation: 'coppelia',
       categories: ['espetaculo'],
       year: 2025,
@@ -161,8 +161,8 @@ export class GaleriaComponent implements OnInit {
       type: 'photo',
       title: 'Expressão Lírica no Palco',
       description: 'A iluminação crua destaca o alinhamento das mãos em pose final.',
-      url: 'assets/images/gabriela-passaro-azul.png',
-      thumbnail: 'assets/images/gabriela-passaro-azul.png',
+      url: 'ballet/galeria/gabriela-passaro-azul.png',
+      thumbnail: 'ballet/galeria/gabriela-passaro-azul.png',
       presentation: 'momentos-palco',
       categories: ['espetaculo'],
       year: 2025,
@@ -175,8 +175,8 @@ export class GaleriaComponent implements OnInit {
       type: 'photo',
       title: 'Ajuste de Pontas na Barra',
       description: 'Estudo de peso e equilíbrio durante a aula de técnica na barra.',
-      url: 'assets/images/gabriela-flautista.png',
-      thumbnail: 'assets/images/gabriela-flautista.png',
+      url: 'ballet/galeria/gabriela-flautista.png',
+      thumbnail: 'ballet/galeria/gabriela-flautista.png',
       categories: ['ensaio'],
       year: 2025,
       tags: ['barra', 'pontas', 'tecnica']
@@ -186,8 +186,8 @@ export class GaleriaComponent implements OnInit {
       type: 'photo',
       title: 'Alongamento em Grupo',
       description: 'Bailarinas em sessão de alongamento muscular no estúdio antes dos ensaios.',
-      url: 'assets/images/gabriela-passaro-azul.png',
-      thumbnail: 'assets/images/gabriela-passaro-azul.png',
+      url: 'ballet/galeria/gabriela-passaro-azul.png',
+      thumbnail: 'ballet/galeria/gabriela-passaro-azul.png',
       categories: ['ensaio'],
       year: 2025,
       tags: ['alongamento', 'estudio', 'grupo']
@@ -199,8 +199,8 @@ export class GaleriaComponent implements OnInit {
       type: 'photo',
       title: 'Ensaio de Variação de Repertório Clássico',
       description: 'Alinhamento corporal em pose clássica durante ensaio individual no espelho.',
-      url: 'assets/images/gabriela-arabesque.png',
-      thumbnail: 'assets/images/gabriela-arabesque.png',
+      url: 'ballet/galeria/gabriela-arabesque.png',
+      thumbnail: 'ballet/galeria/gabriela-arabesque.png',
       categories: ['variacao-repertorio', 'ensaio'],
       year: 2025,
       tags: ['espelho', 'estudio', 'repertorio']
@@ -212,8 +212,8 @@ export class GaleriaComponent implements OnInit {
       type: 'photo',
       title: 'Retoques de Maquiagem',
       description: 'Preparação minuciosa do figurino e maquiagem cênica antes da entrada.',
-      url: 'assets/images/gabriela-flautista.png',
-      thumbnail: 'assets/images/gabriela-flautista.png',
+      url: 'ballet/galeria/gabriela-flautista.png',
+      thumbnail: 'ballet/galeria/gabriela-flautista.png',
       categories: ['bastidores'],
       year: 2026,
       tags: ['camarim', 'maquiagem', 'espelho']
@@ -223,8 +223,8 @@ export class GaleriaComponent implements OnInit {
       type: 'photo',
       title: 'Ajuste final do Tutu',
       description: 'Concentração final com ajuda técnica no camarim dos bastidores.',
-      url: 'assets/images/gabriela-passaro-azul.png',
-      thumbnail: 'assets/images/gabriela-passaro-azul.png',
+      url: 'ballet/galeria/gabriela-passaro-azul.png',
+      thumbnail: 'ballet/galeria/gabriela-passaro-azul.png',
       categories: ['bastidores'],
       year: 2025,
       tags: ['tutu', 'camarim', 'preparacao']
@@ -236,75 +236,156 @@ export class GaleriaComponent implements OnInit {
       type: 'photo',
       title: 'Aula Aberta para Pais',
       description: 'Demonstração de passos básicos de barra clássica para a comunidade.',
-      url: 'assets/images/gabriela-arabesque.png',
-      thumbnail: 'assets/images/gabriela-arabesque.png',
+      url: 'ballet/galeria/gabriela-arabesque.png',
+      thumbnail: 'ballet/galeria/gabriela-arabesque.png',
       categories: ['aula-aberta', 'bastidores'],
       year: 2024,
       tags: ['didatico', 'aula', 'estudio']
-    }
+    },
+
+    // Etudes (2018)
+    {
+      id: 'etudes-2018-1',
+      type: 'photo',
+      title: 'Etudes - Corpo de Baile (2018)',
+      description: 'Apresentação de Etudes no Teatro Municipal de São Paulo com a Escola de Dança de SP.',
+      url: 'ballet/apresentacoes/gabriela-etudes-01.jpg',
+      thumbnail: 'ballet/apresentacoes/gabriela-etudes-01.jpg',
+      presentation: 'etudes',
+      categories: ['espetaculo'],
+      year: 2018,
+      tags: ['etudes', 'teatro-municipal-sp', 'corpo-de-baile', '2018']
+    },
+    {
+      id: 'etudes-2018-2',
+      type: 'photo',
+      title: 'Etudes - Corpo de Baile (2018)',
+      description: 'Apresentação de Etudes no Teatro Municipal de São Paulo com a Escola de Dança de SP.',
+      url: 'ballet/apresentacoes/gabriela-etudes.jpg',
+      thumbnail: 'ballet/apresentacoes/gabriela-etudes.jpg',
+      presentation: 'etudes',
+      categories: ['espetaculo'],
+      year: 2018,
+      tags: ['corpo-de-baile', 'etudes']
+    },
+
+    // O Quebra-Nozes (2018)
+    {
+      id: 'quebra-2018-1',
+      type: 'photo',
+      title: 'O Quebra-Nozes (2018) - Ratinhos',
+      description: 'Apresentação de O Quebra-Nozes no Teatro Municipal de São Paulo (2018).',
+      url: 'ballet/apresentacoes/gabriela-arabesque.png',
+      thumbnail: 'ballet/apresentacoes/gabriela-arabesque.png',
+      presentation: 'quebra-nozes',
+      categories: ['espetaculo'],
+      year: 2018,
+      tags: ['quebra-nozes', 'ratinhos', 'teatro-municipal-sp', '2018']
+    },
+
+    // Giselle
+    {
+      id: 'giselle-1',
+      type: 'photo',
+      title: 'Giselle - Corpo de Baile Wilís',
+      description: 'Gabriela em apresentação do espetáculo Giselle na Fábrica de Cultura (2015).',
+      url: 'ballet/apresentacoes/gabriela-fabrica.JPG',
+      thumbnail: 'ballet/apresentacoes/gabriela-fabrica.JPG',
+      presentation: 'giselle',
+      categories: ['espetaculo'],
+      year: 2015,
+      tags: ['giselle', 'wilis', 'fabrica-de-cultura']
+    },
+    // Vídeo de Giselle (2015)
+    {
+      id: 'giselle-video-1',
+      type: 'video',
+      title: 'Apresentação Giselle - Corpo de Baile',
+      description: 'Trecho em vídeo da apresentação na Fábrica de Cultura.',
+      url: 'https://youtube.com/shorts/xQTcrl_EZ5o?feature=share', // Link do YouTube ou arquivo MP4
+      thumbnail: 'ballet/apresentacoes/gabriela-fabrica.JPG', // Imagem de capa antes do play
+      presentation: 'giselle',
+      categories: ['espetaculo', 'video'],
+      year: 2015,
+      tags: ['giselle', 'video', 'wilis']
+    },
+
+
   ];
 
   // Dicionário de metadados para embelezar os grupos gerados dinamicamente
   groupMetadataMap: { [id: string]: { title: string, type: 'presentation' | 'category', description?: string, coverUrl: string } } = {
-    'bela-adormecida': { 
-      title: 'A Bela Adormecida', 
-      type: 'presentation', 
-      description: 'Apresentação clássica do repertório de Tchaikovsky no Teatro Municipal.', 
-      coverUrl: 'assets/images/gabriela-flautista.png' 
+    'bela-adormecida': {
+      title: 'A Bela Adormecida',
+      type: 'presentation',
+      description: 'Apresentação clássica do repertório de Tchaikovsky no Teatro Municipal.',
+      coverUrl: 'ballet/galeria/gabriela-flautista.png'
     },
-    'gala-abertura': { 
-      title: 'Gala de Abertura', 
-      type: 'presentation', 
-      description: 'Espetáculo de gala marcando o início da temporada lírica de Curitiba.', 
-      coverUrl: 'assets/images/gabriela-passaro-azul.png' 
+    'gala-abertura': {
+      title: 'Gala de Abertura',
+      type: 'presentation',
+      description: 'Espetáculo de gala marcando o início da temporada lírica de Curitiba.',
+      coverUrl: 'ballet/galeria/gabriela-passaro-azul.png'
     },
-    'dom-quixote': { 
-      title: 'Dom Quixote', 
-      type: 'presentation', 
-      description: 'A cores vibrantes da Espanha representadas no papel do Cupido.', 
-      coverUrl: 'assets/images/gabriela-arabesque.png' 
+    'dom-quixote': {
+      title: 'Dom Quixote',
+      type: 'presentation',
+      description: 'A cores vibrantes da Espanha representadas no papel do Cupido.',
+      coverUrl: 'ballet/galeria/gabriela-arabesque.png'
     },
-    'ensaio': { 
-      title: 'Ensaios', 
-      type: 'category', 
-      description: 'A exaustão diária nas barras e as repetições em busca do movimento perfeito.', 
-      coverUrl: 'assets/images/gabriela-flautista.png' 
+    'ensaio': {
+      title: 'Ensaios',
+      type: 'category',
+      description: 'A exaustão diária nas barras e as repetições em busca do movimento perfeito.',
+      coverUrl: 'ballet/galeria/gabriela-flautista.png'
     },
-    'variacao-repertorio': { 
-      title: 'Variações de Repertório', 
-      type: 'category', 
-      description: 'Estudos das coreografias mais consagradas do repertório clássico.', 
-      coverUrl: 'assets/images/gabriela-passaro-azul.png' 
+    'variacao-repertorio': {
+      title: 'Variações de Repertório',
+      type: 'category',
+      description: 'Estudos das coreografias mais consagradas do repertório clássico.',
+      coverUrl: 'ballet/galeria/gabriela-passaro-azul.png'
     },
-    'quebra-nozes': { 
-      title: 'O Quebra-Nozes', 
-      type: 'presentation', 
-      description: 'O clássico de Natal encenado no Teatro Guaíra sob luzes mágicas.', 
-      coverUrl: 'assets/images/gabriela-arabesque.png' 
+    'quebra-nozes': {
+      title: 'O Quebra-Nozes',
+      type: 'presentation',
+      description: 'O clássico de Natal encenado no Teatro Guaíra sob luzes mágicas.',
+      coverUrl: 'ballet/galeria/gabriela-arabesque.png'
     },
-    'bastidores': { 
-      title: 'Bastidores', 
-      type: 'category', 
-      description: 'Preparação física, camarim, maquiagem e a expectativa antes do espetáculo.', 
-      coverUrl: 'assets/images/gabriela-flautista.png' 
+    'bastidores': {
+      title: 'Bastidores',
+      type: 'category',
+      description: 'Preparação física, camarim, maquiagem e a expectativa antes do espetáculo.',
+      coverUrl: 'ballet/galeria/gabriela-flautista.png'
     },
-    'coppelia': { 
-      title: 'Coppélia', 
-      type: 'presentation', 
-      description: 'A cômica e alegre encenação baseada no conto de E.T.A. Hoffmann.', 
-      coverUrl: 'assets/images/gabriela-arabesque.png' 
+    'coppelia': {
+      title: 'Coppélia',
+      type: 'presentation',
+      description: 'A cômica e alegre encenação baseada no conto de E.T.A. Hoffmann.',
+      coverUrl: 'ballet/galeria/gabriela-arabesque.png'
     },
-    'momentos-palco': { 
-      title: 'Momentos no Palco', 
-      type: 'presentation', 
-      description: 'Recortes espontâneos e sentimentos expressados na luz dos holofotes.', 
-      coverUrl: 'assets/images/gabriela-passaro-azul.png' 
+    'momentos-palco': {
+      title: 'Momentos no Palco',
+      type: 'presentation',
+      description: 'Recortes espontâneos e sentimentos expressados na luz dos holofotes.',
+      coverUrl: 'ballet/galeria/gabriela-passaro-azul.png'
     },
-    'aula-aberta': { 
-      title: 'Aulas Abertas', 
-      type: 'category', 
-      description: 'Apresentações didáticas do progresso técnico para familiares e professores.', 
-      coverUrl: 'assets/images/gabriela-arabesque.png' 
+    'aula-aberta': {
+      title: 'Aulas Abertas',
+      type: 'category',
+      description: 'Apresentações didáticas do progresso técnico para familiares e professores.',
+      coverUrl: 'ballet/galeria/gabriela-arabesque.png'
+    },
+    'giselle': {
+      title: 'Giselle',
+      type: 'presentation',
+      description: 'Espetáculo Giselle encenado na Fábrica de Cultura.',
+      coverUrl: 'ballet/apresentacoes/gabriela-fabrica.JPG'
+    },
+    'etudes': {
+      title: 'Etudes',
+      type: 'presentation',
+      description: 'Apresentação icônica de repertório no Teatro Municipal de São Paulo.',
+      coverUrl: 'ballet/apresentacoes/gabriela-etudes-01.jpg'
     }
   };
 
@@ -317,7 +398,7 @@ export class GaleriaComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private elementRef: ElementRef
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.generateGroups();
@@ -355,7 +436,7 @@ export class GaleriaComponent implements OnInit {
       const metadata = this.groupMetadataMap[id] || {
         title: this.capitalizeTitle(id),
         type: this.guessGroupType(id),
-        coverUrl: medias[0]?.url || 'assets/images/gabriela-flautista.png'
+        coverUrl: medias[0]?.url || 'ballet/galeria/gabriela-flautista.png'
       };
 
       const photoCount = medias.filter(m => m.type === 'photo').length;
@@ -390,7 +471,7 @@ export class GaleriaComponent implements OnInit {
         // O query parameter "presentation" pode ser o slug simples como "bela-adormecida"
         // Mapeia para corresponder ao ID gerado dinamicamente
         const matchedGroupId = this.sanitizePresentationParam(presentation);
-        
+
         this.highlightedGroupId = matchedGroupId;
 
         // Dispara rolagem suave até o card destacado após a renderização inicial
@@ -407,11 +488,13 @@ export class GaleriaComponent implements OnInit {
   sanitizePresentationParam(param: string): string {
     const clean = param.toLowerCase();
     if (clean.startsWith('bela-adormecida')) return 'bela-adormecida';
-    if (clean.startsWith('quebra-nozes')) return 'quebra-nozes';
+    if (clean.startsWith('quebra-nozes') || clean.includes('quebra') || clean.startsWith('fada')) return 'quebra-nozes';
     if (clean.startsWith('lago-cisnes')) return 'lago-cisnes';
     if (clean.startsWith('dom-quixote')) return 'dom-quixote';
     if (clean.startsWith('coppelia')) return 'coppelia';
     if (clean.startsWith('gala-encerramento') || clean.startsWith('gala-abertura')) return 'gala-abertura';
+    if (clean.startsWith('giselle')) return 'giselle';
+    if (clean.startsWith('etudes')) return 'etudes';
     return clean;
   }
 
@@ -436,8 +519,8 @@ export class GaleriaComponent implements OnInit {
         const query = this.searchQuery.toLowerCase().trim();
         const matchTitle = group.title.toLowerCase().includes(query);
         const matchDesc = group.description?.toLowerCase().includes(query);
-        const matchMedias = group.medias.some(m => 
-          m.title.toLowerCase().includes(query) || 
+        const matchMedias = group.medias.some(m =>
+          m.title.toLowerCase().includes(query) ||
           m.description?.toLowerCase().includes(query) ||
           (m.tags && m.tags.some(t => t.toLowerCase().includes(query)))
         );
@@ -476,7 +559,7 @@ export class GaleriaComponent implements OnInit {
   }
 
   private guessGroupType(slug: string): 'presentation' | 'category' {
-    const presentationSlugs = ['bela-adormecida', 'gala-abertura', 'dom-quixote', 'quebra-nozes', 'coppelia', 'momentos-palco'];
+    const presentationSlugs = ['bela-adormecida', 'gala-abertura', 'dom-quixote', 'quebra-nozes', 'coppelia', 'momentos-palco', 'giselle', 'etudes'];
     return presentationSlugs.includes(slug) ? 'presentation' : 'category';
   }
 }
