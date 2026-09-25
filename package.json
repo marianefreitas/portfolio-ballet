@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:pages": "ng build && cp dist/portfolio-ballet/browser/index.html dist/portfolio-ballet/browser/404.html",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:portfolio-ballet": "node dist/portfolio-ballet/server/server.mjs"
