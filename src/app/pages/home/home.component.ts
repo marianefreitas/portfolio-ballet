@@ -12,11 +12,11 @@ import { RouterLink } from "@angular/router";
 })
 export class HomeComponent {
 
-  constructor(private ngZone: NgZone) {}
+  constructor(private ngZone: NgZone) { }
 
   intervalId: any;
 
-  targetDate = new Date(2026, 3, 6, 18, 30, 0);
+  targetDate = new Date(2026, 8, 29, 15, 0, 0);
 
 
 
@@ -31,43 +31,43 @@ export class HomeComponent {
   }
 
   ngOnDestroy() {
-      if (this.intervalId) {
-        clearInterval(this.intervalId);
-      }
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
   }
 
-startCountdown() {
-  this.ngZone.runOutsideAngular(() => {
-    this.intervalId = setInterval(() => {
+  startCountdown() {
+    this.ngZone.runOutsideAngular(() => {
+      this.intervalId = setInterval(() => {
 
-      const now = new Date().getTime();
-      const target = this.targetDate.getTime();
+        const now = new Date().getTime();
+        const target = this.targetDate.getTime();
 
-      if (!target) return;
+        if (!target) return;
 
-      const diff = target - now;
+        const diff = target - now;
 
-      let dias = 0;
-      let horas = 0;
-      let minutos = 0;
-      let segundos = 0;
+        let dias = 0;
+        let horas = 0;
+        let minutos = 0;
+        let segundos = 0;
 
-      if (diff > 0) {
-        dias = Math.floor(diff / (1000 * 60 * 60 * 24));
-        horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        minutos = Math.floor((diff / (1000 * 60)) % 60);
-        segundos = Math.floor((diff / 1000) % 60);
-      }
+        if (diff > 0) {
+          dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+          horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+          minutos = Math.floor((diff / (1000 * 60)) % 60);
+          segundos = Math.floor((diff / 1000) % 60);
+        }
 
-      // 👇 volta pro Angular só pra atualizar a UI
-      this.ngZone.run(() => {
-        this.dias = dias;
-        this.horas = horas;
-        this.minutos = minutos;
-        this.segundos = segundos;
-      });
+        // 👇 volta pro Angular só pra atualizar a UI
+        this.ngZone.run(() => {
+          this.dias = dias;
+          this.horas = horas;
+          this.minutos = minutos;
+          this.segundos = segundos;
+        });
 
-    }, 1000);
-  });
-}   
+      }, 1000);
+    });
+  }
 }

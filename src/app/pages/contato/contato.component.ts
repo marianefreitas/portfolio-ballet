@@ -41,11 +41,19 @@ export class ContatoComponent {
       'Accept': 'application/json'
     });
 
-    const body = this.contactForm.value;
+    const body = {
+      name: this.contactForm.value.name,
+      email: this.contactForm.value.email,
+      subject: this.contactForm.value.subject,
+      message: this.contactForm.value.message,
+      _captcha: 'false',
+      _subject: `[Contato Portfólio] ${this.contactForm.value.subject || 'Nova mensagem'}`
+    };
 
-    this.http.post('https://formsubmit.co/ajax/mariane11.freitas@gmail.com', body, { headers })
+    this.http.post('https://formsubmit.co/ajax/e946c67f0b67a42be11fb4f3f453aaa2', body, { headers })
       .subscribe({
         next: (response: any) => {
+          console.log('Resposta FormSubmit:', response);
           this.isSubmitting = false;
           this.submitSuccess = true;
           this.contactForm.reset();
